@@ -1,10 +1,22 @@
 import React from "react";
+
 export default class Layout extends React.Component {
-	render() {
+  constructor() {
+    super();
+    this.state = {
+      title: "Welcome",
+    };
+  }
+
+  changeTitle(title) {
+    this.setState({title});
+  }
+
+  render() {
     return (
       <div>
-        <h1>EEEEEEEEEEEEEEEEEE</h1>
+        <h1>heeeer is Layout</h1>
       </div>
-      );
+    );
   }
 }
