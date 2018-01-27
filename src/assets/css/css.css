@@ -4,3 +4,14 @@
 .white {
 	background-color: white !important;
 }
+
+.divLeft {
+    width:30%;
+    display:block;
+    float: left;
+}
+.divRight {
+    width:70%;
+    display:block;
+    float: right;
+}
