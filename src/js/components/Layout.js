@@ -14,7 +14,6 @@ export default class Layout extends React.Component {
       	<Heder/>
         <LeftMenu/>
         <Cards/>
-        <h1>heeeer is Layout</h1>
       </div>
     );
   }
