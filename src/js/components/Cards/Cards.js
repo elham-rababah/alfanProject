@@ -19,35 +19,16 @@ export default class Cards extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>heeeer is Cards</h1>
-        <Card>
-      <ImageHeader alt="testAlt" imageSrc="http://via.placeholder.com/600x250?text=Placeholder" />
-      <CardBody>
-        <p>
-          Phasellus eleifend orci sed neque ultricies viverra. Nulla orci nunc,
-          hendrerit sed malesuada a, pharetra sed sem. Vivamus et vestibulum
-          nulla. Curabitur gravida maximus dolor at scelerisque. In dignissim,
-          diam nec vehicula scelerisque, metus purus vulputate ante, ac faucibus
-          dui orci dignissim ipsum. Nullam euismod turpis id scelerisque congue.
-        </p>
-        <p>
-          Donec blandit risus ullamcorper suscipit sagittis. Nam auctor laoreet
-          mauris ut bibendum. Aliquam et sodales justo. Proin aliquam augue in
-          ipsum rutrum, ac tristique tellus tincidunt. Aenean blandit ultrices
-          pretium. Suspendisse in arcu bibendum, egestas lorem a, fringilla
-          purus. Integer hendrerit nibh tincidunt, tempor diam eget, tincidunt
-          tortor. Praesent volutpat odio metus, et sollicitudin dolor
-          ullamcorper ut.
-        </p>
-      </CardBody>
-      <CardFooter>
-        <p>
-          <a href="#123">Nullam vel</a>
-        </p>
-      </CardFooter>
-    </Card>
-      </div>
+      <div class="w3-container">
+  <h2>Card Example</h2>
+
+  <div class="w3-card-4" style={{width:'70%'}}>
+    <div class="w3-container">
+      <img src="http://placehold.it/150x200/DC143C/FFFFFF" alt="Avatar" class="w3-left w3-circle w3-margin-right" style={{width:'60px'}}/>
+      <p>CEO at Mighty Schools. Marketing and Advertising. Seeking a new job and new opportunities.</p><br/>
+    </div>
+  </div>
+</div>
     );
   }
 }
