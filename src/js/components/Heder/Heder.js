@@ -8,7 +8,13 @@ export default class Heder extends React.Component {
   render() {
     return (
       <div>
-        <h1>heeeer is Heder</h1>
+        <nav class="navbar navbar-default white">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><img src="../assets/alfanlogo.png" width="45" height="35" class="d-inline-block align-top" alt="alfanlogo"/></a>
+            </div>
+          </div>
+        </nav>
       </div>
     );
   }

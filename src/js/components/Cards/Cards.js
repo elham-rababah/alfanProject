@@ -16,7 +16,7 @@ export default class Cards extends React.Component {
   render() {
     var cardsInfoArr = JSON.parse(cardsInfo);
     return (
-      <div>
+      <div class="white">
         {cardsInfoArr.map(card => {
           return <Card card={card} />
         })}

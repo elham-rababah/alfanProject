@@ -10,10 +10,12 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="gray">
       	<Heder/>
-        <LeftMenu/>
-        <Cards/>
+        <div>
+          <LeftMenu/>
+          <Cards/>
+        </div>
       </div>
     );
   }
