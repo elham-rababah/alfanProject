@@ -1,5 +1,12 @@
 import React from "react";
 import Card from "./Card";
+const cardsInfo = `[
+  {"name" : "Elham ","verified" : "true","flage" : "JorF","subscriber" : "1000","view" : "100","country" : "Jordan","url" : "../assets/1.jpg"},
+  {"name" : "Ali", "verified" : "false","flage" : "UkF","subscriber" : "1000","view" : "100","country" : "Uk","url" : "../assets/2.jpg"},
+  {"name" : "Mohammad", "verified" : "false","flage" : "USAF","subscriber" : "1000","view" : "100","country" : "USA","url" : "../assets/3.jpg"},
+  {"name" : "Mariam", "verified" : "false","flage" : "CanadaF","subscriber" : "1000","view" : "100","country" : "Canada","url" : "../assets/4.jpg"},
+  {"name" : "Aeshah", "verified" : "false","flage" : "JapanF","subscriber" : "1000","view" : "100","country" : "Japan","url" : "../assets/6.jpg"}
+]`;
 
 export default class Cards extends React.Component {
   constructor() {
@@ -7,14 +14,13 @@ export default class Cards extends React.Component {
   }
 
   render() {
-    console.log("Cards");
-    var names = ['Jake', 'Jon', 'Thruster'];
+    var cardsInfoArr = JSON.parse(cardsInfo);
     return (
-    <div>
-      {names.map(i => {
-        return <Card/>
-      })}
-    </div>
+      <div>
+        {cardsInfoArr.map(card => {
+          return <Card card={card} />
+        })}
+      </div>
   );
   }
 }
