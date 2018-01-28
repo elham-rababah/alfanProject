@@ -46,7 +46,7 @@ export default class AudienceGenderSection extends React.Component {
         <div>
           <div class="image1" > <a onClick ={() => this.determineGender("U")}> <img  src="../assets/1.jpg"/></a></div>
            <div class="image2"> <a onClick ={() => this.determineGender("M")}> <img  src="../assets/1.jpg"/></a></div>
-          <div class="image3"> <a onClick ={() => this.determineGender("F")}> <img  src="../assets/1.jpg"/></a></div>
+          <div class=""> <a onClick ={() => this.determineGender("F")}> <img  src="../assets/1.jpg"/></a></div>
            <br />
         </div>
         <br/>
