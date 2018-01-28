@@ -4,18 +4,27 @@ export default class FirstSection extends React.Component {
   constructor() {
     super();
     this.state = {
-      dataSliderValue:0,
+      value:0,
       dataSliderMin:0,
       dataSliderMax:5000000,
       dataSliderStep:100000,
+      dataSliderValue: "[0,1000000]"
+
 
     } 
   }
   componentDidMount(){
     var slider = new Slider('#socialFollwersSlider', {});
     let currentComponent = this;
+    
     slider.on("slide", function(sliderValue) {
-      currentComponent.setState({dataSliderValue: sliderValue[1]});
+      if (sliderValue[1] == 5000000) {
+        currentComponent.setState({value: 0});
+        currentComponent.setState({dataSliderValue: [0,0]});
+      } else {
+        currentComponent.setState({value: sliderValue[1]});
+        currentComponent.setState({dataSliderValue:sliderValue});
+      }
   });
 
   }
@@ -33,11 +42,11 @@ export default class FirstSection extends React.Component {
           data-slider-id='dataSliderId'
           type="text" 
           class="span2" 
-          value={this.state.dataSliderValue} 
+          value={this.state.value} 
           data-slider-min={this.state.dataSliderMin} 
           data-slider-max={this.state.dataSliderMax} 
           data-slider-step={this.state.dataSliderStep} 
-          data-slider-value="[222,0]"
+          data-slider-value={this.state.dataSliderValue}
           /> 
       </div>
     );
