@@ -1,24 +1,24 @@
 import React from "react";
 
-export default class FirstSection extends React.Component {
+export default class AudienceGenderSection extends React.Component {
   constructor() {
     super();
     this.state = {
       value:0,
       dataSliderMin:0,
-      dataSliderMax:5000000,
-      dataSliderStep:100000,
-      dataSliderValue: "[0,1000000]"
+      dataSliderMax:100,
+      dataSliderStep:5,
+      dataSliderValue: "[0,30]"
 
 
     } 
   }
   componentDidMount(){
-    var slider = new Slider('#socialFollwersSlider', {});
+    var slider = new Slider('#audiencegenderSlider', {});
     let currentComponent = this;
     
     slider.on("slide", function(sliderValue) {
-      if (sliderValue[1] == 5000000) {
+      if (sliderValue[1] == 30) {
         currentComponent.setState({value: 0});
         currentComponent.setState({dataSliderValue: [0,0]});
       } else {
@@ -33,12 +33,12 @@ export default class FirstSection extends React.Component {
   render() {
     return (
       <div >
-        Total Social Follwers: <br/> 
-         <div>
+        Audience Gender (last 30 days) <br/> 
+        <div>
         </div>
         <br/>
         <input 
-          id="socialFollwersSlider"
+          id="audiencegenderSlider"
           data-slider-id='dataSliderId'
           type="text" 
           class="span2" 

@@ -1,11 +1,8 @@
 import React from "react";
-import ChannelTypeSection from "./ChannelTypeSection";
-import YoutubeCrateriaSection from "./YoutubeCrateriaSection";
-import FirstSection from "./FirstSection";
+
+import AudienceGenderSection from "./AudienceGenderSection";
+import SocialFollwersSection from "./SocialFollwersSection";
 import VerticalSection from "./VerticalSection";
-import PostTimeSection from "./PostTimeSection";
-import CreatorGenderSection from "./CreatorGenderSection";
-import ViewTimeSection from "./ViewTimeSection";
 
 
 export default class LeftMenu extends React.Component {
@@ -17,17 +14,9 @@ export default class LeftMenu extends React.Component {
     return (
       <div class="divLeft">
         <h3>General Search Criteria </h3>
-        <FirstSection/>
+        <SocialFollwersSection/>
         <VerticalSection/>
-        <ChannelTypeSection/>
-        <CreatorGenderSection/>
-        <PostTimeSection/>
-        <YoutubeCrateriaSection/>
-        <ViewTimeSection/>
-        
-        
-         
-
+        <AudienceGenderSection/>
       </div>
     );
   }
