@@ -8,11 +8,15 @@ export default class AudienceGenderSection extends React.Component {
       dataSliderMin:0,
       dataSliderMax:100,
       dataSliderStep:5,
-      dataSliderValue: "[0,30]"
+      dataSliderValue: "[0,30]",
+      gender :"F",
 
 
     } 
+     //this.handleClick = this.handleClick.bind(this);
+     this.handleClick = this.determineGender.bind(this);
   }
+
   componentDidMount(){
     var slider = new Slider('#audiencegenderSlider', {});
     let currentComponent = this;
@@ -28,13 +32,22 @@ export default class AudienceGenderSection extends React.Component {
   });
 
   }
-  //
 
+  determineGender (e) {
+    this.setState({gender: e});
+  }
+  //
+ 
+  
   render() {
     return (
       <div >
         Audience Gender (last 30 days) <br/> 
         <div>
+          <div class="image1" > <a onClick ={() => this.determineGender("U")}> <img  src="../assets/1.jpg"/></a></div>
+           <div class="image2"> <a onClick ={() => this.determineGender("M")}> <img  src="../assets/1.jpg"/></a></div>
+          <div class="image3"> <a onClick ={() => this.determineGender("F")}> <img  src="../assets/1.jpg"/></a></div>
+           <br />
         </div>
         <br/>
         <input 

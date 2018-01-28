@@ -6,12 +6,12 @@
 }
 
 .divLeft {
-    width:30%;
+    width:35%;
     display:block;
     float: left;
 }
 .divRight {
-    width:70%;
+    width:65%;
     display:block;
     float: right;
 }
@@ -22,5 +22,19 @@
 
 #dataSliderId .slider-handle {
 	background: #fff;
-	
+
+}
+
+.image1 {
+	float: left;
+	width: 100px;
+	margin: 5PX;
+}
+.image2 {
+	float: left; 
+	width: 50px;
+}
+.image3 {
+	float: left; 
+	width: 100px;
 }
